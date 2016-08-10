@@ -1,0 +1,36 @@
+@mixin rating($height, $type: 3) {
+    .app-score {
+        width: $height/19 * 124;
+        height: $height;
+        padding: 0;
+        clear: both;
+        position: relative;
+        @if $type == 1 {
+            background: url("../img/stars-small.png") no-repeat 0 0;
+        } @else if $type == 2 {
+            background: url("../img/stars-large.png") no-repeat 0 0;
+        } @else {
+            background: url("../img/stars.png") no-repeat 0 0;
+            background-size: cover;
+            -ms-behavior: url(../lib/backgroundsize.min.htc)
+        }
+    }
+    .star-0 {
+        background-position: 0 0
+    }
+    .star-1 {
+        background-position: 0 #{-$height}
+    }
+    .star-2 {
+        background-position: 0 #{-$height*2}
+    }
+    .star-3 {
+        background-position: 0 #{-$height*3}
+    }
+    .star-4 {
+        background-position: 0 #{-$height*4}
+    }
+    .star-5 {
+        background-position: 0 #{-$height*5}
+    }
+}

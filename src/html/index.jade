@@ -1,0 +1,126 @@
+doctype
+html(lang="zh-cn")
+    head
+        meta(http-equiv="Content-Type", content="text/html; charset=UTF-8")
+        meta(http-equiv="x-ua-compatible", content="IE=edge,chrome=1")
+
+        title 微客商城
+
+        meta(name="viewport",content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+
+        meta(name="keywords", content="WINKPAX 在线商城,WINK PAX 应用商城,wpax store,WINKPAX 软件商店,安卓Android软件商店,安卓Android软件下载,安卓Android应用下载,手机软应用下载,微客商城,微客应用商店,Android手柄游戏,手柄游戏,游戏,应用,手柄,游戏手柄,热门网游,热门应用,手机游戏,安卓市场,安卓游戏")
+        meta(name="description", content="WINKPAX 在线商城，wpax store，WINKPAX 游戏机官方网站，全面介绍Winkpax游戏机的产品特性，规格参数，价格，官方样照，适用配件，产品多角度演示以及最新促销和订购信息，令您便于了解 WINKPAX 游戏机产品，让WINKPAX游戏机为您的娱乐生活增添乐趣！")
+
+        meta(name="format-detection", content="telephone=no")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        //Set render engine for 360 browser
+        meta(name="renderer", content="webkit")
+        meta(http-equiv="Cache-Control", content="no-siteapp")
+
+        <!-- UC强制全屏 -->
+        meta(name="full-screen", content="yes")
+        <!-- QQ强制全屏 -->
+        meta(name="x5-fullscreen", content="true")
+
+        link(rel="stylesheet", type="text/css", href="lib/normalize.min.css")
+        link(rel="stylesheet", href="lib/fontawesome/css/font-awesome.min.css")
+        link(rel="stylesheet", type="text/css", href="app.css")
+        link(rel="stylesheet", type="text/css", href="lib/slick/slick.css")
+
+        <!--[if lte IE 9]>
+        script(src="/lib/respond.min.js")
+        <![endif]-->
+
+    body
+
+        // 导航
+        .nav-bar.clearfix
+            .nav-bg
+            .container
+                a.logo(href="/")
+                    img(src="/img/logo.png")
+                .nav-menu
+                    ul
+                        li
+                            a.link.index(href="http://www.wpax.cn/") 首页
+                        li
+                            a.link.winkpax(href="/v/static/winkpax") WINK PAX
+                        li
+                            a.link(href="http://bbs.wpax.cn") 社区
+                        li
+                            a.link(href="/v/static/custom-service") 服务
+                .user-bar
+                    .content.clearfix
+                        a.sign-in.light-a(href="javascript:") 登录
+                        span |
+                        a.sign-up.light-a(href="http://account.wpax.cn/sign-up?afterSignUpUrl=http://app.wpax.cn", target='_blank') 注册
+        .nav-shop
+            .container
+                a(href="#/game").logo-container
+                    img(src="/img/logo-shop.png")
+                    .name-shop
+                        h2 微客商城
+                        p app.wpax.com
+                .top-nav
+                    ul
+                        li(data-target="game").active
+                            a(href="javascript:") 游戏
+                        li(data-target="app")
+                            a(href="javascript:") 应用
+                        li(data-target="zhuanti")
+                            a(href="javascript:") 专题
+                        li(data-target="developer")
+                            a(href="javascript:") 开发者
+                .search-shop
+                    .form
+                        input.search(type="text", placeholder="搜索应用或游戏")
+                        a.submit(href="javascript:")
+
+        .top-views
+
+        // 缓存页面
+        .cache-views
+
+        .loading
+
+        .footer
+            .wrapper.clearfix
+                .tools
+                    .container
+                        .title 关注我们
+                        a.tool.qq(href="javascript:void(0)")
+                            .code
+                                img(src="/img/footer/qq-tcode.jpg", data-no-retina)
+                            .logo
+                        a.tool.weixin(href="javascript:void(0)")
+                            .code
+                                img(src="/img/footer/weixin-tcode.jpg", data-no-retina)
+                            .logo
+                        a.tool.weibo(href="http://weibo.com/u/5586035028", target="_blank")
+                            .logo
+                .content.clearfix
+                    a.link(href="/v/static/about-us") 公司简介
+                    a.link(href="/v/static/join-us") 加入我们
+                    a.link(href="/v/static/connect-us") 联系我们
+                    //a.link(href="http://tieba.baidu.com/f?kw=pax&fr=home", target="_blank") 官方贴吧
+                    a.link(href="http://www.wpax.cn/sdk-overview.html") 开发者
+                    a.link(href="/v/static/law") 法律声明
+            .info
+                p.copyright Copyright2015 Huge Whales Inc. All rights reserved.沪ICP备15019655号
+                    a.icp(href="img/footer/icp.jpg", target="_blank", data-no-retina) &nbsp;&nbsp;增值电信业务经营许可证：沪 B2-20160022
+
+            <!--[if lte IE 8]>
+            script(src="lib/json2.js")
+            script(src="lib/es5-shim.min.js")
+            <![endif]-->
+            script(src="lib/jquery-1.11.1.min.js")
+            script(src="lib/lodash.min.js")
+            script(src="lib/backbone-min.js")
+            script(src="lib/bluebird.min.js")
+            script(src="lib/runtime.min.js")
+            script(src="lib/slick/slick.min.js")
+            script(src="setup.js")
+            script(src="template.js")
+            script(src="app.js")
+            script(src="https://s4.cnzz.com/z_stat.php?id=1260010558&web_id=1260010558", language="JavaScript")
+

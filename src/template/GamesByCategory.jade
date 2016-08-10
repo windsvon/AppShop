@@ -1,0 +1,15 @@
+.hot-category
+    for item, index in list
+        if index === 0
+            a.hot-category-name(href="javascript:" data-target=categoryId)=item
+        else
+            .app-group(data-target=item._id)
+                a.link-container(href="javascript:")
+                    img.app-icon(src=W.cloudImg(item.icon))
+                    .app-detail
+                        .app-name=item.name
+                        .app-score(class=W.appRating(item.score))
+                        p.download-count=W.downloadCountStr(item) + "下载"
+                a.app-download.fa.fa-download(href=W.cloudDownload(item.apk)) &nbsp
+                    span 下载
+

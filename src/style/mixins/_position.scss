@@ -1,0 +1,108 @@
+// ignore value pass the attribute
+@mixin _t-r-b-l($top:ignore,$right:ignore,$bottom:ignore,$left:ignore) {
+    @if $top!=ignore {
+        top: $top;
+    }
+    @if $right!=ignore {
+        right: $right;
+    }
+    @if $bottom!=ignore {
+        bottom: $bottom;
+    }
+    @if $left!=ignore {
+        left: $left;
+    }
+}
+
+@mixin position($model, $top,$right,$bottom,$left) {
+    position: $model;
+    @include _t-r-b-l($top, $right, $bottom, $left);
+}
+
+@mixin position-relative($top,$right,$bottom,$left) {
+    position: relative;
+    @include _t-r-b-l($top, $right, $bottom, $left);
+}
+
+@mixin position-abs($top,$right,$bottom,$left) {
+    position: absolute;
+    @include _t-r-b-l($top, $right, $bottom, $left);
+}
+
+@mixin position-abs-top() {
+    position: absolute;
+    @include _t-r-b-l(0, ignore, ignore, 0);
+}
+
+@mixin position-abs-right() {
+    position: absolute;
+    @include _t-r-b-l(0, 0, ignore, ignore);
+}
+
+@mixin position-fixed($top,$right,$bottom,$left) {
+    position: fixed;
+    @include _t-r-b-l($top, $right, $bottom, $left);
+}
+
+@mixin position-fixed-top() {
+    position: fixed;
+    @include _t-r-b-l(0, ignore, ignore, 0);
+}
+
+@mixin center($width: null, $height: null) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    @if not $width and not $height {
+        transform: translate(-50%, -50%);
+    } @else if $width and $height {
+        width: $width;
+        height: $height;
+        margin: -($width / 2) #{0 0} -($height / 2)
+    } @else if not $height {
+        margin-left: -($width / 2);
+        transform: translateY(-50%);
+        width: $width;
+    } @else {
+        margin-top: -($height / 2);
+        transform: translateX(-50%);
+        height: $height;
+    }
+}
+
+//.parent {
+//    position: relative;
+//}
+//.child-with-unknown-dimensions {
+//    @include center;
+//}
+//.child-with-known-width {
+//    @include center(400px);
+//}
+//.child-with-known-height {
+//    @include center($height: 400px);
+//}
+//.child-with-known-dimensions {
+//    @include center(400px, 400px);
+//}
+
+@mixin clearfix() {
+    & {
+        *zoom: 1;
+    }
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin box-sizing($box-model) {
+    -webkit-box-sizing: $box-model; // Safari <= 5
+    -moz-box-sizing: $box-model; // Firefox <= 19
+    box-sizing: $box-model;
+}

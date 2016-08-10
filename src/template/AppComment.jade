@@ -1,0 +1,5 @@
+.comment.clearfix
+    .app-score(class=W.appRating(10 * Number(c.score)))
+    .account= "来自 " + W.showUsername(c.username)
+    .createOn= W.toYMD(c.createdOn)
+    .content= c.comment

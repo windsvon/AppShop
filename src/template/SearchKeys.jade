@@ -1,0 +1,4 @@
+for k in page
+    -var val = k.text.replace('大家都在搜：', '')
+    a.key(href='javascript:', data-value=val)= val
+

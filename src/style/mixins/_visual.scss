@@ -1,0 +1,60 @@
+@mixin visual($bgColor:ignore, $border:ignore, $borderRadius:ignore) {
+    @if $bgColor != ignore {
+        background-color: $bgColor;
+    }
+    @if $border != ignore {
+        border: $border;
+    }
+    @if $borderRadius != ignore {
+        border-radius: $borderRadius;
+    }
+}
+
+/* Opacity
+  ========================================================================== */
+
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin ie8BG($path) {
+    -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="#{$path}", sizingMethod='scale');
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="#{$path}", sizingMethod='scale');
+}
+
+@mixin ie8BGBS() {
+    -ms-behavior: url(/static/lib/backgroundsize.min.htc);
+    behavior: url(/static/lib/backgroundsize.min.htc);
+}
+
+// retina
+@mixin at2x($path, $ext: "jpg", $w: cover, $h: auto) {
+    $at1x_path: "#{$path}.#{$ext}";
+    $at2x_path: "#{$path}@2x.#{$ext}";
+
+    background-image: url("#{$at1x_path}");
+
+    @if $w == cover or $w == contain {
+        background-size: $w;
+    } @else {
+        background-size: $w $h;
+    }
+
+    @media all and (-webkit-min-device-pixel-ratio: 1.5),
+    all and (-o-min-device-pixel-ratio: 3/2),
+    all and (min--moz-device-pixel-ratio: 1.5),
+    all and (min-device-pixel-ratio: 1.5) {
+        background-image: url("#{$at2x_path}");
+        @if $w == cover or $w == contain {
+            background-size: $w;
+        } @else {
+            background-size: $w $h;
+        }
+    }
+
+    background-repeat: no-repeat;
+
+    //@include ie8BG($at1x_path);
+}

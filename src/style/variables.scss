@@ -1,0 +1,122 @@
+// 内容区域宽度
+//$content-area-width: 1194px;
+$content-area-width: 960px;
+// 登录、注册、用户条高度
+$user-bar-height: 40px;
+
+$borderRadius: 5px;
+
+$btnBorderRadius: 2px;
+
+$c2: #2d3e37;
+$c3: #444156;
+$c4: #748994;
+$c5: #aab2b9;
+$c6: #e5e7eb;
+$c7: #4186ea;
+$mainC: rgb(34, 161, 249);
+$mainC-light: #06bcca;
+$mainC2: #ababab;
+$btnBC: #2d73bc;
+
+$mainTitleC: #222;
+$mainTitleC2: lighten($mainTitleC, 20);
+
+// media width
+$phone: 320px;
+$tablet: 768px;
+$desktop: 1024px;
+$breakpoints: (phone: $phone, tablet: $tablet, desktop: $desktop);
+
+// label color
+$labelC: #333;
+
+// button
+// default button color
+$btn-default-c: #e0e0e0;
+
+// 导航高度
+$nav-bar-height: 80px;
+$nav-bar-height-mobile: 52px;
+$nav-bar-c: #2d3237;
+$nav-link-c: #7c8992;
+$nav-link-hover-c: #212529;
+
+// 导航背景色
+$nav-bg-c1: #1f2225;
+$nav-bg-c2: #171719;
+
+// 导航pc字体大小
+$nav-link-fs-l: 16px;
+
+$nav-link-c-light: #a1adb5;
+$nav-link-hover-c-light: #1f2225;
+
+$sub-nav-bar-height: 40px;
+
+// logo pc 宽度
+$logo-width: 58px;
+$logo-width-l: 53px;
+
+// logo pc 宽度
+$logo-width-l: 68px;
+
+// 底部导航
+$bottom-nav-height: 46px;
+$bottom-nav-bc: #eee;
+$bottom-nav-fs: 14px;
+
+// login font
+$loginFC: $c2;
+
+// input outline color
+$inputOutlineC: #06bcca;
+
+// 手机端左右间距 gap
+$view-m-hGap: 4%;
+
+// 页脚高度
+$footer-height: 172px;
+// 页脚主色
+$footer-main-c: #728599;
+$footer-main-c2: $mainC2;
+
+$terms-content-c: #2d3237;
+
+// 分页原点填冲色
+$page-control-fc: #aabac0;
+// 分页选中色
+$page-control-ac: #249ff5;
+
+$nav-z-index: 20;
+
+// 手机端水平间距
+$gap-h-mobile: 16px;
+
+// pax 产品 缩略图 宽度 高度
+$productIconWidth: 120px;
+$productIconHeight: 120px;
+
+// pax 产品 缩略图 宽度 高度
+$productIconWidth-l: 200px;
+$productIconHeight-l: 200px;
+
+// 弹出框 标题左水平边距
+$dialogTitleGapH: 25px;
+// 弹出框 标题高度
+$dialogTitleHeight: 60px;
+// 弹出框 标题字体大小
+$dialogTitleFS-s: 16px;
+$dialogTitleFS-m: 20px;
+$dialogTitleFS-l: 24px;
+// 弹出框 标题背景色
+$dialogTitleBGC: $nav-bar-c;
+
+// 弹出框 内容左水平边距
+$dialogContentGapH: 25px;
+
+//字体颜色
+
+$font-color: #7c8994;
+
+$type: false !default

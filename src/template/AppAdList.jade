@@ -1,0 +1,13 @@
+for ad in list
+    if ad.target.toApp
+        a(href="#/"+group+"/"+ad.target.toApp)
+            img(src=W.cloudImg(ad.webShopAdImage))
+    else if ad.target.toHuoDong
+        a(href=ad.target.toHuoDong)
+            img(src=W.cloudImg(ad.webShopAdImage))
+    else if ad.target.toZhuanti
+        a(href="#/zhuanti/" + ad.target.toZhuanti)
+            img(src=W.cloudImg(ad.webShopAdImage))
+    else
+        a(href=ad.target.url)
+            img(src=W.cloudImg(ad.webShopAdImage))

@@ -1,0 +1,44 @@
+if pageCount > 1 && pageCount <= 7
+    .pagination-block
+        -var n = 1
+        a.last(href="javascript:", data-target=pageNo - 1) 上一页
+        while n < pageCount + 1
+            a.page-num.active(href="javascript:", data-target=n)= n++
+        a.next(href="javascript:", data-target=pageNo - -1) 下一页
+
+if pageCount > 7 && pageNo < 7
+    .pagination-block
+        -var n = 1
+        a.last(href="javascript:", data-target=pageNo - 1) 上一页
+        while n < 7
+            a.page-num.active(href="javascript:", data-target=n)= n++
+        a.page-num ...
+        a.page-num.active(href="javascript:", data-target=pageCount)= pageCount
+        a.next(href="javascript:", data-target=pageNo - -1) 下一页
+
+if pageCount > 7 && pageNo >= 7 && pageNo <= pageCount -3
+    .pagination-block
+        -var n = 1
+        a.last(href="javascript:", data-target=pageNo - 1) 上一页
+        a.page-num.active(href="javascript:", data-target=1)= 1
+        a.page-num.active(href="javascript:", data-target=2)= 2
+        a.page-num ...
+        a.page-num.active(href="javascript:", data-target=pageNo - 1)= pageNo - 1
+        a.page-num.active(href="javascript:", data-target=pageNo)= pageNo
+        a.page-num.active(href="javascript:", data-target=pageNo - -1)= pageNo - -1
+        a.page-num ...
+        a.page-num.active(href="javascript:", data-target=pageCount)= pageCount
+        a.next(href="javascript:", data-target=pageNo - -1) 下一页
+
+if pageCount > 7 && pageNo >= 7 && pageNo > pageCount -3
+    .pagination-block
+        -var n = 1
+        a.last(href="javascript:", data-target=pageNo - 1) 上一页
+        a.page-num.active(href="javascript:", data-target=1)= 1
+        a.page-num.active(href="javascript:", data-target=2)= 2
+        a.page-num ...
+        a.page-num.active(href="javascript:", data-target=pageCount-3)= pageCount-3
+        a.page-num.active(href="javascript:", data-target=pageCount-2)= pageCount-2
+        a.page-num.active(href="javascript:", data-target=pageCount-1)= pageCount-1
+        a.page-num.active(href="javascript:", data-target=pageCount)= pageCount
+        a.next(href="javascript:", data-target=pageNo - -1) 下一页

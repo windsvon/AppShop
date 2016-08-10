@@ -1,0 +1,13 @@
+.search-key
+    | 关键字
+    span &nbsp;:&nbsp;#{key} 共显示#{pageSize}条
+for a in page
+    a.result.app.clearfix(href="#/"+a.type+"/"+a._id)
+        .app-icon.pull-left
+            img(src=W.cloudImg(a.icon))
+        .app-info.clearfix
+            .app-name= a.name
+            .app-desc
+            .app-vendor.pull-left 开发商&nbsp;:&nbsp;#{a.vendor}
+            .app-version 版本&nbsp;:&nbsp;#{a.versionName}
+

@@ -1,0 +1,25 @@
+for item in list
+    .zhuanti-group(data-target=item._id)
+        if item.tag === "hot"
+            img.tag-hot(src="img/tag-hot.png")
+        if item.tag === "new"
+            img.tag-hot(src="img/tag-new.png")
+        if item.cover
+            if item.cover.path
+                //img.zhuanti-cover(src=W.cloudImg(item.cover.path))
+                img.zhuanti-cover(src=W.cloudImg(item.cover))
+            else
+                img.zhuanti-cover(src='img/default.png')
+        else
+            img.zhuanti-cover(src='img/default.png')
+        .zhuanti-info
+            h1.zhuanti-name=item.name
+            if item.description
+                p.zhuanti-description=item.description
+            else
+                p.zhuanti-description 暂时没有专题描述^_^
+            .zhuanti-app-list(data-target=item._id)
+            a(href='/zhuanti/' + item._id).zhuanti-more 更多&gt
+
+.pagination-view
+            //img.app-icon(src=W.cloudImg(app.icon))

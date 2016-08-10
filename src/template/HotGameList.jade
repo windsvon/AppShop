@@ -1,0 +1,11 @@
+for app, index in list
+    if app
+        .app-group(data-target=app._id)
+            a.link-container(href="javascript:")
+                img.app-icon(src=W.cloudImg(app.icon))
+                .app-detail
+                    .app-name=app.name
+                    .app-category=app.categories[0]
+                    .app-score(class=W.appRating(app.score))
+            a.app-download.fa.fa-download(href=W.cloudDownload(app.apk)) &nbsp
+                span 下载

@@ -1,0 +1,9 @@
+for app in list
+    if app
+    .app-group(data-target=app._id)
+        a.link-container(href="javascript:")
+            img.app-icon(src=W.cloudImg(app.icon))
+            .app-detail
+                .app-name=app.name
+                .app-size=W.appSize(app.apk.size)
+                .app-score(class=W.appRating(app.score))

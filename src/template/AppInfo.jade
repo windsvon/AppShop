@@ -1,0 +1,83 @@
+.route
+    a(href="#/"+ group data-target=group).group-link=W.toCN(group)
+    a(href="javascript:") >
+    a(href="javascript:").category-link=app.categories[0]
+    a(href="javascript:") >
+    a(href="javascript:")=app.name
+
+.app-info-left
+    img.app-icon(src=W.cloudImg(app.icon))
+    a.app-download(href=W.cloudDownload(app.apk)) 立即下载
+    ul.app-info
+        li
+            span.item-name 评分
+            span :
+            span.app-score(class=W.appRating(app.score))
+        li
+            span.item-name 类别
+            span :
+            span.item-info
+                each category in app.categories
+                    span.category-list=category
+        li
+            span.item-name 开发商
+            span :
+            span.item-info=app.vendor ? app.vendor : "未知"
+        li
+            span.item-name 版本
+            span :
+            span.item-info=app.versionName
+        li
+            span.item-name 下载
+            span :
+            span.item-info=W.downloadCountStr(app)
+        li
+            span.item-name 文件大小
+            span :
+            span.item-info=W.appSize(app.apk.size)
+        if app.usingPad
+            li
+                span.item-name 操作方式
+                span :
+                span.item-info 手柄
+        else
+            li
+                span.item-name 操作方式
+                span :
+                span.item-info 触控
+        li
+            span.item-name 更新
+            span :
+            span.item-info=W.toYMD(app.modifiedOn)
+    .title
+        img(src="img/icon-love.png")
+        h2 猜你喜欢
+    .app-may-like(data-target = group)
+
+.app-info-right
+    h1.app-name=app.name
+    .app-intro!=app.introduction ? app.introduction : "此应用暂无介绍"
+
+    if app.introduction.length > 100
+        p.more-info 展开&nbsp
+            span.fa.fa-angle-down
+
+    if group == "game"
+        h1 游戏截图
+    if group == "app"
+        h1 应用截图
+    .screen-shots
+        for image in app.screenshots
+            img.screen-shot(src=W.cloudImg(image))
+
+    h1 用户评论
+    .comments-block
+        form.add-comment
+            textarea.comment-content(placeholder="说说你的感受吧。。。")
+            ul.comment-rating.app-score.star-3
+                each i in [1,2,3,4,5]
+                    li(data-target=i).rating-star
+            input.score-storage(type="text", value=3)
+            p.score-description
+            a.btn.btn-add-comment(href='javascript') 提交评论
+

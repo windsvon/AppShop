@@ -1,0 +1,122 @@
+@import "variables";
+
+.nav-shop {
+    height: 100px;
+    border: 1px solid black;
+    position: relative;
+    background-color: #414851;
+    .container {
+        width: 980px;
+        height: 72px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto auto;
+        .logo-container {
+            width: 192px;
+            height: 72px;
+            position: relative;
+            display: table;
+            img {
+                display: table-cell;
+                vertical-align: middle;
+            }
+            .name-shop {
+                display: table-cell;
+                vertical-align: middle;
+                text-align: right;
+                h2 {
+                    font-size: 24px;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    color: #0384d6;
+                }
+                p {
+                    font-size: 14px;
+                    margin: 0;
+                    color: $font-color;
+                }
+            }
+        }
+        .top-nav {
+            width: 386px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto auto;
+            ul {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                li {
+                    display: inline-block;
+                    width: 94px;
+                    height: 22px;
+                    border-right: 1px solid $font-color;
+                    margin-top: 25px;
+                    font-size: 0px;
+                    text-align: center;
+                    &:last-child {
+                        border-right: none;
+                    }
+                    a {
+                        vertical-align: top;
+                        padding-bottom: 37px;
+                        font-size: 18px;
+                        color: $font-color;
+                    }
+                    &:hover, &.active {
+                        cursor: pointer;
+                        a {
+                            border-bottom: 4px solid #0384d6;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+        .search-shop {
+            position: absolute;
+            height: 31px;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto auto;
+            .form {
+                vertical-align: middle;
+                font-size: 14px;
+                position: relative;
+                .search {
+                    width: 252px;
+                    height: 31px;
+                    line-height: 31px;
+                    border-radius: 17px;
+                    outline: none;
+                    transition: all 0.5s;
+                }
+                .submit {
+                    display: inline-block;
+                    width: 31px;
+                    height: 31px;
+                    background: url("../img/search.png") no-repeat right;
+                    position: absolute;
+                    right: 0;
+                }
+            }
+        }
+
+    }
+}
+
+.top-views {
+    background: rgb(253,253,253) url("../img/background.png") repeat-x;
+    background-size: cover;
+    overflow: auto;
+}

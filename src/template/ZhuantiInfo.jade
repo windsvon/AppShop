@@ -1,0 +1,28 @@
+.zhuanti-info
+    if z.cover
+        if z.cover.path
+            //img.zhuanti-cover(src=W.cloudImg(item.cover.path))
+            img.zhuanti-cover(src=W.cloudImg(z.cover))
+        else
+            img.zhuanti-cover(src='img/default.png')
+    else
+        img.zhuanti-cover(src='img/default.png')
+    p 创建时间:
+        span=W.toYMD(z.modifiedOn)
+    p 类&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp别:
+        span 应用
+    p 应用个数:
+        span=z.apps.length + "个"
+
+.zhuanti-detail
+    .zhuanti-intro
+        h1=z.name
+        if z.description
+            .zhuanti-description=z.description
+            if z.description.length >= 100
+                p.more-info 展开&nbsp
+                    span.fa.fa-angle-down
+        else
+            .zhuanti-description 暂时没有专题描述^_^
+
+    .app-list

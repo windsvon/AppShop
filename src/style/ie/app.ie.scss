@@ -1,0 +1,178 @@
+@import "../variables";
+@import "../mixins/mixins";
+
+body, html {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
+
+.nav-bar {
+    .nav-menu {
+        font-size: 14px;
+    }
+}
+
+select {
+    height: 30px !important;
+    line-height: 18px !important;
+    padding: 2px 0 !important;
+}
+
+.sub-nav {
+    background: transparent !important;
+    a {
+        display: none !important;
+        &.buy {
+            display: inline-block;
+        }
+    }
+
+    .divider {
+        display: none !important;
+    }
+}
+
+.view.view-index {
+    .section {
+        .title {
+            font-size: 34px !important;
+        }
+
+        .sub-title {
+            font-family: "Microsoft YaHei", "wenquanyi micro hei", "Segoe UI", sans-serif;
+
+            font-size: 22px !important;
+        }
+
+        .price {
+            font-size: 26px;
+            font-family: "Microsoft YaHei", "wenquanyi micro hei", "Segoe UI", sans-serif;
+        }
+
+        span {
+            vertical-align: middle;
+        }
+    }
+
+    .ads {
+        .title span {
+            font-size: 18px;
+        }
+    }
+
+}
+
+.view.view-winkpax {
+    @include media('>=tablet') {
+        .section {
+            height: 860px !important;
+            margin: 0 !important;
+            padding: 0 !important;
+
+            .content {
+                opacity: 1;
+                transform: none;
+            }
+
+            .title {
+                font-size: 34px !important;
+            }
+
+            .desc {
+                font-size: 14px !important;
+            }
+        }
+
+        .winkpax {
+            margin-top: $nav-bar-height;
+        }
+
+        .pad {
+            height: 800px;
+        }
+
+        .battery {
+            .batter-image {
+                height: 655px;
+            }
+        }
+
+        .handle {
+            .content {
+                transform: none;
+            }
+
+            &[handle='1'] {
+                .content {
+                    width: 100%;
+                    margin: 40px 0 0;
+                    transform: none;
+                }
+            }
+
+            .handle-image {
+                transition: none;
+            }
+        }
+
+        .xijie {
+            .values {
+                opacity: 1;
+            }
+        }
+
+        .cpu {
+            .content {
+                margin-top: 40px;
+            }
+            .value {
+                transform: none;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.view-presale {
+    @include media('>=tablet') {
+        .section {
+            .title {
+                font-size: 34px !important;
+            }
+
+            .desc {
+                font-size: 14px !important;
+            }
+
+            &.quan, &.choujiang {
+                height: auto !important;
+            }
+        }
+    }
+}
+
+.view.view-video {
+    .jp-type-single {
+        height: 539px !important;
+        width: $content-area-width !important;
+    }
+
+    .title {
+        font-size: 28px !important;
+    }
+    .link {
+        font-size: 16px !important;
+    }
+}
+
+.footer {
+    .content {
+        .link {
+            font-size: 12px;
+        }
+    }
+
+    p, .footer-links {
+        font-size: 12px;
+    }
+}

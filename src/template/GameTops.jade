@@ -1,0 +1,18 @@
+for app, index in list
+    if app
+        .app-group.rank-group(data-target=app._id)
+            a.link-container(href="javascript:")
+                h3.rank= index+1
+                img.app-icon(src=W.cloudImg(app.icon))
+                .app-detail
+                    .app-name=app.name
+                    .app-score(class=W.appRating(app.score))
+                    .app-category=app.categories[0]
+            a.app-download(href=W.cloudDownload(app.apk))
+
+
+
+
+
+
+

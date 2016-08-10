@@ -1,0 +1,23 @@
+.view-sign-in-dialog
+    .dialog-markup
+    .dialog-container.clearfix
+        a.dialog-close.pull-right(href='javascript:')
+        .dialog-title 账号登录
+        .dialog-content
+            .input-group
+                label 账户
+                input.text-input.username(type='text', placeholder='手机号/邮箱')
+            .input-group
+                label 密码
+                input.text-input.password(type='password')
+            .input-group.clearfix.action
+                label.checkbox-label.pull-left
+                    input(type='checkbox')
+                    | 自动登录
+                a.pull-right.forget-password(href="http://account.wpax.cn/forget-password?afterSignUpUrl=http://app.wpax.cn", target='_blank') 忘记密码
+
+            .input-group
+                a.btn.btn-primary.submit(href='javascript:') 登录
+
+        .dialog-footer
+            a.sign-up(href='http://account.wpax.cn/sign-up?afterSignUpUrl=http://app.wpax.cn', target='_blank') 快速注册

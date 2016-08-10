@@ -1,0 +1,18 @@
+.category-view
+    .container
+        .route
+            a(href="#/" + group).group-link=W.toCN(group)
+            a(href="javascript:") >
+            a(href="javascript:")=W.toCN(group)+"分类"
+        .hot-categories
+            .category-title
+                if group == "game"
+                    img(src="img/icon-joypad.png")
+                    h1 全部游戏
+                if group == "app"
+                    img(src="img/icon-joypad.png")
+                    h1 全部应用
+            .category-list
+
+        .app-list
+
